@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>DayMate 🤝</title>
+<meta name="theme-color" content="#0b1020">
+<meta name="description" content="DayMate: a 24-hour daily planner with a live animated scene, calendar, alarms and progress streaks.">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon-192.png">
+<link rel="apple-touch-icon" href="icon-192.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<canvas id="c"></canvas>
+<div id="flash"></div>
+<footer id="foot"><span class="spark">✨</span> Crafted with <span class="heart">❤️</span> by <span class="brand">HH"S</span> <span class="rocket">🚀</span></footer>
+<div id="ep"><b id="epn"></b><span id="epc"></span></div>
+<div id="ui">
+  <span id="clock">12:00</span>
+  <input id="t" type="range" min="0" max="1" step="0.001" value="0.5" aria-label="Time of day">
+  <button id="play">Pause</button>
+  <button id="live">Live</button>
+  <button id="cal">📅 Calendar</button>
+  <button id="rt" class="on">DayMate 🤝</button>
+  <button id="theme" aria-label="Switch light or dark theme" title="Theme (T)">🌙</button>
+  <button id="wx">Weather: Clear</button>
+  <button id="mu">Music: Off</button>
+  <input id="vol" type="range" min="0" max="1" step="0.01" value="0.6" aria-label="Volume">
+</div>
+<aside id="panel">
+  <div class="ph"><h1><span class="gtext">DayMate</span> 🤝</h1><button id="pmore" aria-label="Routine options">⋮</button></div>
+  <div id="dateLine"></div>
+  <small style="opacity:.7">Click an activity to jump the scene to that time. Tick it when done.</small>
+  <p id="now"></p>
+  <div id="prog" style="opacity:.8;margin:0 0 8px"></div>
+  <ul id="list"></ul>
+  <form id="add" onsubmit="return false">
+    <input type="time" id="at" value="12:00" aria-label="Time">
+    <input type="text" id="what" placeholder="New activity" aria-label="Activity">
+    <button type="button" id="addBell" aria-pressed="false" aria-label="Alarm for the new task" title="Alarm">🔕</button>
+    <button id="addBtn">Add</button>
+  </form>
+</aside>
+
+<script src="script.js"></script>
+</body>
+</html>
